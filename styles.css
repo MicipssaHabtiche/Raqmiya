@@ -1,0 +1,208 @@
+/* BODY: centers container on page */
+body {
+    font-family: Arial;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end; /* login container on right */
+    align-items: center;
+    height: 100vh;
+    padding-right: 50px;
+
+    /* Gradient + image */
+    background-image: 
+        url('assets/fc523092481405e20c17cd19c6fae292b75f5b14.png'),
+         linear-gradient(to top right, #011B2C, #03346E);
+
+    background-size: 50% auto, cover;       /* image smaller, gradient covers */
+    background-position: left, center;  /* image left, gradient centered */
+    background-repeat: no-repeat, no-repeat;
+}
+
+
+
+
+
+/* LOGIN CONTAINER */
+.login-container {
+    background-color: transparent;
+    padding: 50px;
+    border-radius: 10px;
+    width: 450px; /* fixed width makes alignment easier */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+    margin-right:125px;
+    padding: 80px 80px;
+
+}
+
+/* HEADINGS */
+.login-container h1:first-of-type {
+    margin-bottom: 20px;
+    margin-top: 0px;
+    color: #A1E3F9;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.login-container h1:last-of-type {
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    margin-bottom: 50px;
+}
+
+
+/* FORM */
+.login-form {
+    display: flex;
+    flex-direction: column; /* stack inputs and button */
+    align-items: center;    /* center everything horizontally */
+}
+
+/* FORM GROUP (label + input) */
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;            /* flex container */
+    flex-direction: column;   /* stack label above input */
+    align-items: flex-start;  /* left-align everything */
+    position: relative;
+}
+
+
+/* LABEL */
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;       /* space between label and input */
+    color: #F2F3F7;
+
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    text-align: left; 
+                     /* make sure label text is left-aligned */
+}
+
+/* INPUT */
+.form-group input {
+    width: 80%;               /* same width for all inputs */
+    padding: 13.5px;
+    padding-right: 80px;
+    border-radius: 5px;
+    border: 1px solid white;
+    text-align: left; 
+    color: #F2F3F7;  
+    background-color:#03346E ;
+    font-size: 18px;
+}
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.7);  /* placeholder text slightly lighter */
+    font-size: 16px;
+    
+}
+
+
+
+
+.login-form button {
+    width: 100%;
+    padding: 13.5px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0e3;
+    background-color: #A1E3F9 !important;
+    color: #03346E !important;
+    cursor: pointer;
+    margin-right: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 30px;
+    align-items: stretch; 
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* optional shadow */
+    align-self: center;  /* this forces perfect alignment */
+}
+
+.form-group {
+    position: relative; /* allow absolute positioning inside */
+    width: 80%;
+    margin-bottom: 15px;
+}
+
+
+.form-group {
+    position: relative; /* allow absolute positioning inside */
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Common style for all inputs */
+.form-group input {
+    width: 100%;
+    height: 55px;              /* full width of container */
+    padding: 13.5px 40px 13.5px 10px;  /* right space for eye */
+    border-radius: 10px;
+    border: 1px solid #FFFFFFB2;
+    background-color: #03346E;
+    color: white;
+    box-sizing: border-box;   /* keeps width consistent */
+}
+
+/* Eye icon */
+.toggle-password {
+    position: absolute;
+    right: 10px;              /* distance from input edge */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 26px;
+    color: #FFFFFFB2;
+    margin-top: 8.5px;
+}
+
+/* Password focus */
+.form-group input:focus {
+    outline: 1px solid white;
+    background-color: #03346E;
+}
+
+
+
+.login-form button:hover {
+    background-color: #A1E3F9;
+
+}
+.form-group input:focus {
+    outline: 0.1px solid white;   /* your custom border color */
+    outline-offset: 0;           /* optional: distance from input edge */
+    border: 0.1px solid white;     /* optional: also change border */
+    background-color: #03346E;   /* keep the background the same */
+}
+
+
+
+.forgot-password {
+    text-align: right;
+    width: 100%;
+    margin-top: -10px;
+    text-align: right;
+    margin-bottom: 15px;
+    
+    }
+.forgot-password a {
+    text-decoration: none;  /* remove underline */
+    color: rgb(255, 255, 255);          /* link color */
+    font-size: 0.8rem;      /* smaller font */
+} 
+.forgot-password a:hover {
+    color: rgb(255, 255, 255);     /* color on hover */
+    text-decoration: underline;
+}  
+/* ADD THIS CODE - Hide browser's built-in password eye icon */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-contacts-auto-fill-button,
+input[type="password"]::-webkit-credentials-auto-fill-button {
+    visibility: hidden;
+    display: none !important;
+}

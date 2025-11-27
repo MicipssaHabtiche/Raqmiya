@@ -1,0 +1,87 @@
+/* Container for the whole page */
+.verification-container {
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #011B2C, #03346E);
+    color: white;
+    border-radius: 10px;
+    text-align: center;
+    padding: 80px 80px;
+    margin-right: 20px;
+    padding-left: 30px;
+}
+
+/* RAQMIYA text style */
+.raqmiya-text {
+    color: #A1E3F9;
+}
+
+/* Instruction paragraph */
+.text3 {
+    font-size: 16px;
+    margin-bottom: 1px;
+    color: #FFFFFF99;
+}
+
+/* Form container */
+.verification-form {
+    background-color: transparent;
+    padding: 50px;
+    border-radius: 10px;
+    width: 400px;
+    margin-top: -13px;
+}
+
+/* Input boxes */
+.verification-form input {
+    width: 97%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: #03346E;
+    color: white;
+
+}
+
+/* Buttons container */
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Buttons */
+.form-buttons button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Back button */
+.form-buttons button:first-of-type {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    
+}
+
+/* Continue button */
+.form-buttons button:last-of-type {
+    background-color: #A1E3F9;
+    color: #03346E;
+}
+
+/* Hover effects */
+.form-buttons button:first-of-type:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form-buttons button:last-of-type:hover {
+    background-color: #8ED6F5;
+}
+
+
