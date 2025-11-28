@@ -22,29 +22,29 @@ function LandingPage() {
                     <a href="#" className={styles.logo}>RAQMIYA</a>
                     <ul className={styles.mainNav}>
                         <li><a href="#Homepage">Home</a></li>
-                        <li><a href="#Landline">Products</a></li>
-                        <li><a href="#Internet">About</a></li>
-                        <li><a href="#Internet">Feedback</a></li>
+                        <li><a href="#product">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#Feedback">Feedback</a></li>
                     </ul>
                     <a href="#" className={styles.contact}>Contact</a>
                 </div>
             </div>
             {/* end header  */}
             {/* start Landing  */}
-            <div className={styles.landing}>
+            <div className={styles.landing} id="home">
                 <div className={styles.container}>
                     <p className={styles.p1}>Tech Made Simple With</p>
                     <h2>RAQMIYA Store</h2>
                     <p>Raqmiya Store is a modern hardware and informatics shop that offers everything you need; from PCs and computer units to keyboards, disks, and mice. At Raqmiya, you’ll always find high-quality products at the most suitable prices.</p>
                     <div className={styles.buydiscover}>
-                        <a href="#" className={styles.buy}>Buy Now!</a>
-                        <a href="#" className={styles.discover}>Discover More</a>
+                        <a href="#product" className={styles.buy}>Buy Now!</a>
+                        <a href="#discovermore" className={styles.discover}>Discover More</a>
                     </div>
                 </div>
             </div>
             {/* end landing */}
             {/* start pruducts  */}
-            <div className={styles.products}>
+            <div className={styles.products} id="product">
                 <div className={styles.container}>
                     <div className={styles.paragraphselements}>
                         <p className={styles.statement1}>Products</p>
@@ -72,54 +72,66 @@ function LandingPage() {
                             </div>
                         </div> */}
                         <div className={styles.elements}>
-                            <div className={styles.card}>
-                                <img src={element1} alt="" />
-                                <div className={styles.overlay}>
-                                    <h3>Headsets</h3>
-                                    <p>Enjoy crystal, clear sound and long-lasting comfort.</p>
-                                    <span className={styles.more}>See More →</span>
+                            <Link to='/Headphones'>
+                                <div className={styles.card}>
+                                    <img src={element1} alt="" />
+                                    <div className={styles.overlay}>
+                                        <h3>Headsets</h3>
+                                        <p>Enjoy crystal, clear sound and long-lasting comfort.</p>
+                                        <span className={styles.more}>See More →</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.card}>
-                                <img src={element2} alt="" />
-                                <div className={styles.overlay}>
-                                    <h3>Desktops Tower</h3>
-                                    <p>Power and performance to handle all your computing tasks efficiently.</p>
-                                    <span className={styles.more}>See More →</span>
+                            </Link>
+                            <Link to="/Powersuplies">
+                                <div className={styles.card}>
+                                    <img src={element2} alt="" />
+                                    <div className={styles.overlay}>
+                                        <h3>Power suplies</h3>
+                                        <p>Power and performance to handle all your computing tasks efficiently.</p>
+                                        <span className={styles.more}>See More →</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.card}>
-                                <img src={element3} alt="" />
-                                <div className={styles.overlay}>
-                                    <h3>Office Chairs</h3>
-                                    <p>Optimal comfort for working or gaming for hours without fatigue.</p>
-                                    <span className={styles.more}>See More →</span>
+                            </Link>
+                            <Link to="/Chairs">
+                                <div className={styles.card}>
+                                    <img src={element3} alt="" />
+                                    <div className={styles.overlay}>
+                                        <h3>Office Chairs</h3>
+                                        <p>Optimal comfort for working or gaming for hours without fatigue.</p>
+                                        <span className={styles.more}>See More →</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.card}>
-                                <img src={element4} alt="" />
-                                <div className={styles.overlay}>
-                                    <h3>Routers</h3>
-                                    <p>Fast and stable connection for all your devices at home or office.</p>
-                                    <span className={styles.more}>See More →</span>
+                            </Link>
+                            <Link to="/Accessories">
+                                <div className={styles.card}>
+                                    <img src={element4} alt="" />
+                                    <div className={styles.overlay}>
+                                        <h3>Accessories</h3>
+                                        <p>Fast and stable connection for all your devices at home or office.</p>
+                                        <span className={styles.more}>See More →</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.card}>
-                                <img src={element5} alt="" />
-                                <div className={styles.overlay}>
-                                    <h3>Laptops</h3>
-                                    <p>Mobility and power combined to work and play anywhere.</p>
-                                    <span className={styles.more}>See More →</span>
+                            </Link>
+                            <Link to="/Laptops">
+                                <div className={styles.card}>
+                                    <img src={element5} alt="" />
+                                    <div className={styles.overlay}>
+                                        <h3>Laptops</h3>
+                                        <p>Mobility and power combined to work and play anywhere.</p>
+                                        <span className={styles.more}>See More →</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className={styles.card}>
-                                <img src={element6} alt="" />
-                                <div className={styles.overlay}>
-                                    <h3>Computer Fan</h3>
-                                    <p>Efficient cooling to keep your system performing at its best.</p>
-                                    <span className={styles.more}>See More →</span>
+                            </Link>
+                            <Link to="/Fans">
+                                <div className={styles.card}>
+                                    <img src={element6} alt="" />
+                                    <div className={styles.overlay}>
+                                        <h3>Computer Fan</h3>
+                                        <p>Efficient cooling to keep your system performing at its best.</p>
+                                        <span className={styles.more}>See More →</span>
+                                    </div>
                                 </div>
-                            </div>
+                            </Link>
                         </div>
 
                     </div>
@@ -128,7 +140,7 @@ function LandingPage() {
             </div>
             {/* end pruducts  */}
             {/* start about us  */}
-            <div className={styles.aboutus}>
+            <div className={styles.aboutus} id="about">
                 <div className={styles.container}>
                     <div className={styles.titles}>
                         <p className={styles.title1}>About Us</p>
@@ -138,7 +150,7 @@ function LandingPage() {
                     <div className={styles.introduction}>
                         <div className={styles.paragraphe}>
                             <p className={styles.paragraphe1}>At Raqmiya Store, we’re passionate about technology and innovation. Our mission is to make high quality hardware accessible to everyone. We offer a wide range of products, including PCs, components, peripherals, and accessories, all carefully selected for their performance, reliability, and price</p>
-                            <p className={styles.seeproducts}>See Products →</p>
+                            <a href="#product"> <p className={styles.seeproducts} >See Products →</p> </a>
                         </div>
                         <div> <img src={aboutusimg} alt="" /></div>
                     </div>
@@ -146,7 +158,7 @@ function LandingPage() {
             </div>
             {/* end about us  */}
             {/* start feedback  */}
-            <div className={styles.feedback}>
+            <div className={styles.feedback} id="Feedback">
                 <div className={styles.container}>
                     <div className={styles.intro}>
                         <p className={styles.intro1}>Feedback</p>
@@ -209,12 +221,12 @@ function LandingPage() {
                             <p className={styles.paragraph1}>Raqmiya Store is a modern hardware and informatics shop that offers everything you need. At Raqmiya, you’ll always find high-quality products at the most suitable prices.</p>
                         </div>
                         <div className={styles.part2}>
-                            <p className={styles.title2}>Discover More</p>
+                            <p className={styles.title2} id="discovermore">Discover More</p>
                             <ul>
-                                <li>Home Page</li>
-                                <li>Products</li>
-                                <li>About Us</li>
-                                <li>Feedback</li>
+                                <a href="#home"><li>Home Page</li></a>
+                                <a href="#product"><li>Products</li></a>
+                                <a href="#about"><li>About Us</li></a>
+                                <a href="#Feedback"><li>Feedback</li></a>
                             </ul>
                         </div>
                         <div className={styles.part3}>
